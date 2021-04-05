@@ -1,0 +1,7 @@
+.edit-info {
+    cursor: pointer;
+}
+
+.edit-info :hover {
+    color: aqua;
+}

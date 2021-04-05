@@ -1,0 +1,45 @@
+.layout{
+  margin: 0;
+  padding: 0;
+}
+
+.site-layout-content {
+  min-height: 280px;
+  padding: 24px;
+  background: #fff;
+}
+
+.logo {
+  float: left;
+  width: 120px;
+  height: 31px;
+  color: #fff;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.search {
+    float: left;
+    width: 300px;
+    height: 31px;
+    margin: 12px 20px 12px 12px;
+}
+
+.action {
+  float: right;
+  width: 250px;
+  height: 31px;
+  display: flex;
+  margin: 18px 0px 12px 12px;
+  justify-content: center;
+  align-items: center;
+}
+
+.action a {
+  color: #fff;
+}
+
+.ant-row-rtl .logo {
+  float: right;
+  margin: 16px 0 16px 24px;
+}

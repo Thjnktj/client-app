@@ -1,23 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Route, Switch } from "react-router";
+import Navbars from "./layouts/Navbars";
+import { getAllCategory, getAllData, getCart } from "./redux/actions";
+import routes from "./routes";
 
 function App() {
+  const dispatch = useDispatch();
+  const auth = useSelector((state) => state.auth);
+
+  useEffect(() => {
+    if (auth.authenticate) {
+      dispatch(getCart());
+    }
+    dispatch(getAllData());
+    dispatch(getAllCategory());
+  }, [auth, dispatch]);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbars>
+        <Switch>
+          {routes.map((route, index) => {
+            return (
+              <Route
+                key={index}
+                path={route.path}
+                exact={route.exact}
+                component={route.component}
+              />
+            );
+          })}
+        </Switch>
+      </Navbars>
     </div>
   );
 }

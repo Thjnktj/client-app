@@ -1,0 +1,44 @@
+img {
+    width: 100%;
+    height: 300px;
+}
+
+section {
+    min-height: 240px;
+    padding-bottom: 3rem;
+    margin-top: 1rem;
+    position: relative;
+}
+
+.card {
+    width: 100%;
+}
+
+.title-pass {
+    width: 100%;
+    height: 3rem;
+    background-color: #fff;
+    margin-bottom: 1rem;
+    
+}
+
+.title-content {
+    width: 350px;
+    height: 100%;
+    text-transform: uppercase;
+    font-size: 22px;
+    line-height: 40px;
+    padding: 0px 15px 0 20px;
+    color: #fff;
+    border-bottom: 3rem solid #ff9400;
+    border-left: 0px solid transparent;
+    border-right: 3rem solid transparent;
+}
+
+.show-list {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    font-size: 1rem;
+    color: cadetblue;
+}
